@@ -1,0 +1,10 @@
+.section-header{
+    font-family: Proxima-Nova-Black;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 200px;
+    /* line-height: 244px; */
+    text-align: right;
+    color: rgba(0, 0, 0, 0.1);
+    padding-right: 48px;
+}

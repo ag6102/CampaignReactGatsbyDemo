@@ -1,0 +1,80 @@
+.recent-work-container{
+
+}
+
+.work-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.work-header .work-right-header{
+    position: relative;
+    bottom: -37px;
+}
+
+.recent-work-container .recent-subheading{
+    padding: 0 130px;
+}
+
+.recent-work-container .recent-works{
+    padding: 45px 48px 28px 48px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    top: -100px;
+}
+
+.recent-work-container .recent-works .work{
+    width: 50%;
+    z-index: 9;
+    height: 450px;
+    position: relative;
+}
+
+.recent-work-container .recent-works .work img{
+    margin-bottom: 0px;
+}
+
+.overlay-con{
+    display: none;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(4px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-family: Proxima-Nova-Regular;
+    font-style: normal;
+    font-weight: normal;
+    color: #CE9200;
+    padding: 25px 32px 25px 30px;
+    align-items: flex-end;
+}
+
+.recent-work-container .recent-works .work:hover>div.overlay-con {
+    display: flex;
+}
+
+
+.project-heading{
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFFFF;
+}
+
+.project-name{
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 39px;
+    margin-bottom: 29px;
+}
+
+.project-button{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    border-bottom: 1px solid #CE9200;
+}

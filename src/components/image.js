@@ -1,6 +1,6 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import PropTypes from "prop-types"
+import "./image.css"
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -13,20 +13,20 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Image = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+const Image = ({ icon, label }) => (
+  <img src={require('../images/' + icon)} alt={label} />
+)
+
+Image.propTypes = {
+  icon: PropTypes.string,
+  label: PropTypes.string
 }
+
+Image.defaultProps = {
+  data: ``,
+  label: ``
+}
+
 
 export default Image

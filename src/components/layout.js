@@ -6,18 +6,54 @@
  */
 
 import React from "react"
-import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
+import Introduction from "./introduction"
+import Services from "./services"
+import RecentWorks from "./recentWorks"
+import ClientsInfo from "./clientsInfo"
+import AOS from 'aos';
+import 'aos/dist/aos.css'
+import Footer from "./footer"
 
-const Layout = ({ children }) => {
+const Layout = () => {
+  // or simply just AOS.init();
+  AOS.init({
+    // initialise with other settings
+    duration: 2000
+  });
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
+    query {
       site {
         siteMetadata {
-          title
+          title,
+          servicesData{
+            title,
+            services{
+              icon,
+              label,
+              desc
+            }
+          },
+          recentWorkData{
+            title,
+            backgroundText,
+            recentWork{
+              icon,
+              label
+            },
+            buttonLabel
+          },
+          clientsData{
+            title,
+            clients{
+              icon,
+              label
+            },
+            buttonLabel
+          }
         }
       }
     }
@@ -26,26 +62,15 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+      <Introduction></Introduction>
+      <div style={{ background: `#EFEDE4`, position: `relative`, top: `-90px` }}>
+        <Services servicesData={data.site.siteMetadata.servicesData}></Services>
+        <RecentWorks recentWorks={data.site.siteMetadata.recentWorkData}></RecentWorks>
+        <ClientsInfo clients={data.site.siteMetadata.clientsData}></ClientsInfo>
+        <Footer></Footer>
       </div>
     </>
   )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 }
 
 export default Layout

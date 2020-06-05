@@ -1,0 +1,21 @@
+.service-header{
+    top: -68px;
+    position: relative;
+}
+
+.services{
+    padding: 20px 94px;
+}
+
+.subheading{
+    padding: 0 36px;
+    font-family: Proxima-Nova-Black;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 39px;
+}
+
+.services-group{
+    display: flex;
+}

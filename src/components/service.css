@@ -1,0 +1,47 @@
+.service-container{
+    font-family: Proxima-Nova-Regular;
+    font-style: normal;
+    color: #000000;
+    margin: 70px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.service-container:hover .service-name{
+    color: #CE9200;
+}
+
+.service-container:hover .see-more{
+    color: #CE9200;
+    border-bottom: 1px solid #CE9200;
+}
+
+.service-container .image-holder{
+    width: 40px;
+    height: 37px;
+    margin-bottom: 26px;
+}
+
+.service-container .service-name{
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 39px;
+    margin-bottom: 18px;
+}
+
+.service-container .service-text{
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 95px;
+}
+
+.service-container .see-more{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    padding-bottom: 5px;
+}

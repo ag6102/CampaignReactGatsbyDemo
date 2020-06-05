@@ -1,0 +1,39 @@
+.cients-container{
+    padding: 132px 150px 148px 130px;
+}
+
+.clients-subheading{
+    padding: 0 0 26px 0;
+}
+
+.clients-info{
+    display: flex;
+}
+
+.clients-info .clients-desc > div:first-child > div:last-child{
+    margin-top: 20px;
+}
+
+.clients-desc{
+    font-family: Proxima-Nova-Regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.client-left{
+    width: 33%;
+    margin-right: 140px;
+}
+
+.clients-info .clients{
+    width: 67%;
+    display: flex;
+    flex-flow: wrap;
+    margin-top: 10px;
+}
+
+.client {
+    width: 25%;
+}

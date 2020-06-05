@@ -1,0 +1,44 @@
+@font-face {
+    font-family: "Butler-Black";
+    src: url("Butler-Black.woff2");
+}
+
+@font-face {
+    font-family: "Butler";
+    src: url("Butler.woff2");
+}
+
+@font-face {
+    font-family: "Proxima-Nova-Black-Italic";
+    src: url("Proxima Nova Black Italic.otf");
+}
+
+@font-face {
+    font-family: "Proxima-Nova-Black";
+    src: url("Proxima Nova Black.otf");
+}
+
+@font-face {
+    font-family: "Proxima-Nova-Bold-Italic";
+    src: url("Proxima Nova Bold Italic.otf");
+}
+
+@font-face {
+    font-family: "Proxima-Nova-Bold";
+    src: url("Proxima Nova Bold.otf");
+}
+
+@font-face {
+    font-family: "Proxima-Nova-Light-Italic";
+    src: url("Proxima Nova Light Italic.otf");
+}
+
+@font-face {
+    font-family: "Proxima-Nova-Light";
+    src: url("Proxima Nova Light.otf");
+}
+
+@font-face {
+    font-family: "Proxima-Nova-Regular";
+    src: url("Proxima Nova Regular.otf");
+}
